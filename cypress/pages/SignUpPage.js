@@ -38,6 +38,10 @@ class SignupPage {
         cy.get('.swal2-container .swal2-html-container')
         .should('have.text', expectedMessage)
     }
+
+    alertMessageShouldBe(expectedMessage){
+        cy.get('.alert-error').should('have.text', expectedMessage)
+    }
 }
 
 export default SignupPage;
