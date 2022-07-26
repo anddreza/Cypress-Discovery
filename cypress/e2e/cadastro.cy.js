@@ -102,5 +102,6 @@ describe('Cadastro', ()=> {
     cy.get('.swal2-container .swal2-html-container')
         .should('have.text', expectedMessage)
 
+    cy.get('.alert-error').should('have.text', 'Oops! CPF inválido')
   })
 })
