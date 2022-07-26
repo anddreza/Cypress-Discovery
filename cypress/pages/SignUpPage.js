@@ -27,7 +27,10 @@ class SignupPage {
         cy.get('input[name="city-uf"]').should('have.value', deliver.address.city_state)
         
         cy.contains('.delivery-method li', deliver.delivery_method).click()
-    
         cy.get('input[accept^="image"]').attachFile('/images/' + deliver.cnh)
+    }
+
+    submit(){
+        cy.get('form button[type="submit"]').click()
     }
 }
