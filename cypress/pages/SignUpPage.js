@@ -33,4 +33,9 @@ class SignupPage {
     submit(){
         cy.get('form button[type="submit"]').click()
     }
+
+    modalContentShouldBe(expectedMessage){
+        cy.get('.swal2-container .swal2-html-container')
+        .should('have.text', expectedMessage)
+    }
 }
