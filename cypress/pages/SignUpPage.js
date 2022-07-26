@@ -39,3 +39,6 @@ class SignupPage {
         .should('have.text', expectedMessage)
     }
 }
+
+export default SignupPage;
+// Exportando essa pag para que posso importa-la na camada de testes

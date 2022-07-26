@@ -1,3 +1,4 @@
+import SignupPage from '../pages/SignUpPage'
 
 describe('Cadastro', ()=> {
   it('Usuário deve se tornar um entregador', ()=> {
@@ -18,8 +19,15 @@ describe('Cadastro', ()=> {
       delivery_method: 'Moto',
       cnh: 'cnh-digital.jpg'
     }
- 
+
+    var signup = new SignupPage()
+
+    signup.go()
+    signup.fillForm(deliver)
+    signup.submit()
+    
     const expectedMessage = 'Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato.'
+    signup.modalContentShouldBe(expectedMessage)
 
   })
 
