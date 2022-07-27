@@ -1,22 +1,25 @@
-import SignupPage from '../pages/SignUpPage'
+import signup from '../pages/SignUpPage'
 
 describe('Cadastro', ()=> {
 
-  before(function() {
-    cy.log("Tudo aqui é executado uma única vez ANTES de TODOS os casos de testes")
-  })
+  //var signup = new SignupPage() //fica generico para todos os testes
 
-  beforeEach(function (){
-    cy.log("Tudo aqui é executado sempre ANTES de CADA caso de teste")
-  })
 
-  after(function(){
-    cy.log("Tudo aqui é executado uma única vez DEPOIS de TODOS os casos de testes")
-  })
+  //before(function() {
+ //   cy.log("Tudo aqui é executado uma única vez ANTES de TODOS os casos de testes")
+ // })
 
-  afterEach(function (){
-    cy.log("Tudo aqui é executado sempre DEPOIS de CADA caso de teste")
-  })
+ // beforeEach(function (){
+ //   cy.log("Tudo aqui é executado sempre ANTES de CADA caso de teste")
+//  })
+
+//  after(function(){
+ //   cy.log("Tudo aqui é executado uma única vez DEPOIS de TODOS os casos de testes")
+ // })
+
+ // afterEach(function (){
+ //   cy.log("Tudo aqui é executado sempre DEPOIS de CADA caso de teste")
+ // })
 
   it('Usuário deve se tornar um entregador', ()=> {
    
@@ -37,7 +40,7 @@ describe('Cadastro', ()=> {
       cnh: 'cnh-digital.jpg'
     }
 
-    var signup = new SignupPage()
+  //  var signup = new SignupPage()
 
     signup.go()
     signup.fillForm(deliver)
@@ -67,7 +70,6 @@ describe('Cadastro', ()=> {
       cnh: 'cnh-digital.jpg'
     }
 
-    var signup = new SignupPage()
     signup.go()
     signup.fillForm(deliver)
     signup.submit()

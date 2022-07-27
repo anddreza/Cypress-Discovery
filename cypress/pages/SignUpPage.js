@@ -44,5 +44,5 @@ class SignupPage {
     }
 }
 
-export default SignupPage;
+export default new SignupPage;
 // Exportando essa pag para que posso importa-la na camada de testes
