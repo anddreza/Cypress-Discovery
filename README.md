@@ -16,3 +16,7 @@ O padrão PascalCase
         // O padrão Kermel case usado para variaveis e também funções no JS.
     }
 }
+
+Quando utilizado o npx cypress run roda tudo em backgroud diferente do que foi configurado dentro do package.json npx cypress open. 
+
+O Cypress automaticamente cria um vídeo como evidência de teste. No Selenium precisa programar para mostrar isso, mas no Cypress isso funciona normalmente. 
